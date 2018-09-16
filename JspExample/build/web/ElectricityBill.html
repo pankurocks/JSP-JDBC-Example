@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Electricity Bill</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <style>
+            table{
+                width:40%;
+                text-align: center;
+                margin: auto;
+                padding: 10px;
+                font-size: 1.2em;
+            }
+            
+        </style>
+    </head>
+    <body>
+        
+        <h1 style="text-align: center"> Electricity Bill </h1>
+        <hr>
+        <form action="Bill.jsp" method="POST">
+            <table>
+                <tbody>
+                    <tr>
+                        <td>Connection Number: </td>
+                        <td>
+                            <input type="text" name="connection" required="" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Customer Name: </td>
+                        <td> <input type="text" name="name" required=""/></td>
+                    </tr>
+                    <tr>
+                        <td>Connection Type: </td>
+                        <td style="text-align: right"> <input type="radio" name="type" value="res" checked="checked" /> Residential &nbsp; &nbsp;
+                            <input type="radio" name="type" value="com" checked="checked" /> Commercial
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Previous Reading: </td>
+                        <td> <input type="text" name="previous" required="" /></td>
+                    </tr>
+                    <tr>
+                        <td>Current Reading: </td>
+                        <td>  <input type="text" name="current" required="" /></td>
+                    </tr>
+                    <tr>
+                        
+                        <td colspan="2"> <input type="checkbox" name="senior" value="ON" /> &nbsp;&nbsp; Are you a Senior Citizen?</td>
+                    </tr>
+                    <tr>
+                        <td><input type="submit" value="Generate Bill" /></td>
+                        <td><input type="reset" value="Reset" /></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            
+        </form>
+    </body>
+</html>
